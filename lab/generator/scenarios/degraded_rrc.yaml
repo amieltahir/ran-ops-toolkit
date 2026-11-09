@@ -1,0 +1,6 @@
+name: degraded_rrc
+description: A few cells have a clearly degraded RRC connection setup success rate.
+injections:
+  - type: degraded_rrc
+    cell_count: 3
+    rrc_success_rate: 0.85
