@@ -7,7 +7,7 @@ exact spec version used for each item.
 |---|---|---|---|
 | LTE counter names (`core/counters.yaml`) | 3GPP TS 32.425 | not yet recorded | **Names unverified**: check against the spec |
 | LTE KPI formulas (`core/kpis.yaml`) | 3GPP TS 32.450 | not yet recorded | **Formulas unverified**: check against the spec |
-| PM file format | 3GPP TS 32.435 | not yet recorded | Planned (M1) |
+| PM file format | 3GPP TS 32.435 | not yet recorded | **Layout written from memory** (`lab/generator/pm_writer.py`); not yet validated against the real `measCollec.xsd`. Run `python scripts/fetch_xsd.py --url <xsd-or-zip>`, then `python -m lab.generator` |
 | Admin/operational state | ITU-T X.731 | n/a | Used in `core/models.py` |
 | Alarm severity | ITU-T X.733 | n/a | Used in `core/models.py` |
 

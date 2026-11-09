@@ -9,6 +9,8 @@ __pycache__/
 htmlcov/
 build/
 dist/
+third_party/
+lab_out/
 .env
 .env.*
 !.env.example
