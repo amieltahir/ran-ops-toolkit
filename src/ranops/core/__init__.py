@@ -16,9 +16,20 @@ from ranops.core.models import (
     ParameterScope,
     Severity,
     Site,
+    Unit,
+    UnitKind,
 )
+from ranops.core.catalogue import CounterDef, KpiDef, load_counters, load_kpis
+from ranops.core.evaluator import evaluate_kpi
 
 __all__ = [
+    "CounterDef",
+    "KpiDef",
+    "Unit",
+    "UnitKind",
+    "evaluate_kpi",
+    "load_counters",
+    "load_kpis",
     "AdminState",
     "Alarm",
     "Baseline",
