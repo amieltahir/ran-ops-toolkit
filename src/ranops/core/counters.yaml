@@ -1,0 +1,27 @@
+# LTE counters used in v0.1. Names follow 3GPP TS 32.425.
+# Exact names must be checked against the spec version recorded in docs/references.md.
+counters:
+  - name: RRC.ConnEstabAtt.Sum
+    description: Attempted RRC connection establishments (all causes)
+    unit: count
+    reference: TS 32.425 RRC connection establishment
+  - name: RRC.ConnEstabSucc.Sum
+    description: Successful RRC connection establishments (all causes)
+    unit: count
+    reference: TS 32.425 RRC connection establishment
+  - name: E-RAB.EstabInitAttNbr.Sum
+    description: Attempted initial E-RAB establishments (all QCIs)
+    unit: count
+    reference: TS 32.425 E-RAB setup
+  - name: E-RAB.EstabInitSuccNbr.Sum
+    description: Successful initial E-RAB establishments (all QCIs)
+    unit: count
+    reference: TS 32.425 E-RAB setup
+  - name: RRU.PrbUsedDl
+    description: Mean number of downlink PRBs used
+    unit: prb
+    reference: TS 32.425 radio resource utilization
+  - name: RRU.PrbAvailDl
+    description: Mean number of downlink PRBs available
+    unit: prb
+    reference: TS 32.425 radio resource utilization

@@ -9,10 +9,20 @@ X.733 (perceived severity).
 
 from __future__ import annotations
 
+from collections.abc import Mapping
 from enum import StrEnum
 from ipaddress import IPv4Address
+from types import MappingProxyType
 
-from pydantic import AwareDatetime, BaseModel, ConfigDict, Field, model_validator
+from pydantic import (
+    AwareDatetime,
+    BaseModel,
+    ConfigDict,
+    Field,
+    field_serializer,
+    field_validator,
+    model_validator,
+)
 
 
 class CoreModel(BaseModel):
@@ -41,6 +51,11 @@ class Severity(StrEnum):
     CLEARED = "cleared"
 
 
+class UnitKind(StrEnum):
+    BASEBAND = "baseband"
+    RADIO = "radio"
+
+
 class ParameterScope(StrEnum):
     NODE = "node"
     CELL = "cell"
@@ -64,6 +79,14 @@ class Node(CoreModel):
     vendor: str = Field(min_length=1)
     sw_version: str = Field(min_length=1)
     ip: IPv4Address
+
+
+class Unit(CoreModel):
+    """A hardware unit of a radio node (baseband or radio)."""
+
+    id: str = Field(min_length=1)
+    node_id: str = Field(min_length=1)
+    kind: UnitKind
 
 
 class Cell(CoreModel):
@@ -155,4 +178,13 @@ class KpiSample(CoreModel):
     period_start: AwareDatetime
     granularity_s: int = Field(default=900, gt=0)
     value: float | None
-    inputs: dict[str, float] = Field(default_factory=dict)
+    inputs: Mapping[str, float] = Field(default_factory=dict)
+
+    @field_validator("inputs")
+    @classmethod
+    def _freeze_inputs(cls, value: Mapping[str, float]) -> Mapping[str, float]:
+        return MappingProxyType(dict(value))
+
+    @field_serializer("inputs")
+    def _serialise_inputs(self, value: Mapping[str, float]) -> dict[str, float]:
+        return dict(value)

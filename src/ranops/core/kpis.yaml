@@ -1,0 +1,27 @@
+# KPI definitions: formulas over aliased catalogue counters (see TS 32.450).
+# Formulas allow only numbers, aliases, + - * / and parentheses.
+kpis:
+  - name: rrc_setup_success_rate
+    description: RRC connection setup success rate
+    unit: percent
+    formula: 100 * succ / att
+    inputs:
+      succ: RRC.ConnEstabSucc.Sum
+      att: RRC.ConnEstabAtt.Sum
+    reference: TS 32.450 RRC setup success rate
+  - name: erab_setup_success_rate
+    description: Initial E-RAB setup success rate
+    unit: percent
+    formula: 100 * succ / att
+    inputs:
+      succ: E-RAB.EstabInitSuccNbr.Sum
+      att: E-RAB.EstabInitAttNbr.Sum
+    reference: TS 32.450 E-RAB setup success rate
+  - name: dl_prb_utilisation
+    description: Downlink PRB utilisation
+    unit: percent
+    formula: 100 * used / avail
+    inputs:
+      used: RRU.PrbUsedDl
+      avail: RRU.PrbAvailDl
+    reference: TS 32.450 / TS 32.425 radio resource utilization
