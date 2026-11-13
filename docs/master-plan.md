@@ -54,7 +54,6 @@ ran-ops-toolkit/
   README.md
   pyproject.toml
   .gitignore
-  .pre-commit-config.yaml
   .github/workflows/ci.yml
   src/ranops/
     core/            # models, counter catalogue, KPI definitions, KPI evaluator
@@ -116,7 +115,7 @@ class RanAdapter(Protocol):
 
 | # | Milestone | Done when |
 |---|---|---|
-| M0 | Repo and tooling | Repo created, CI green on an empty test, pre-commit working |
+| M0 | Repo and tooling | Repo created, CI green on an empty test |
 | M1 | Model and lab | Generator produces a valid network and PM files for `healthy` and `degraded_rrc`; validator passes; output is deterministic per seed |
 | M2 | Ericsson adapter and mock CLI | `get_cell_states` and `get_parameters` work end to end against the mock |
 | M3 | Tools and CLI | Each scenario is correctly detected, checked against `truth.json` |
@@ -126,7 +125,7 @@ class RanAdapter(Protocol):
 
 ## 10. Engineering ground rules
 
-- Python 3.11+, pydantic, pytest, ruff, mypy (strict on `core/`), pre-commit
+- Python 3.11+, pydantic, pytest, ruff, mypy (strict on `core/`)
 - CI on every push: lint, type check, tests
 - Public material only for mock dialects. Nothing from licensed vendor documentation (CPI, real MO models, ENM/AMOS software)
 - Secrets never in the repo; AWX credentials or environment variables
@@ -140,7 +139,7 @@ class RanAdapter(Protocol):
 git init ran-ops-toolkit && cd ran-ops-toolkit
 python3 -m venv .venv && source .venv/bin/activate
 pip install --upgrade pip
-pip install pydantic pyyaml pytest ruff mypy pre-commit
+pip install pydantic pyyaml pytest ruff mypy
 pip install asyncssh jinja2   # needed from M2/M3
 ```
 
@@ -154,7 +153,7 @@ Skip for now: Docker, minikube, Cython. Add `ansible-core` and `ansible-builder`
 
 ## 13. Next actions
 
-1. M0: create the private repo, add README, `pyproject.toml`, `.gitignore`, pre-commit config and CI.
+1. M0: create the private repo, add README, `pyproject.toml`, `.gitignore` and CI.
 2. M1: write the core pydantic models and counter catalogue.
 3. M1: build the seeded generator with `healthy` and `degraded_rrc`, plus `truth.json`.
 4. M1: PM writer and validator.
