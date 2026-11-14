@@ -22,6 +22,7 @@ python -m pip install -e ".[dev]"
 
 Run the same checks as CI with `make check` (or `make fix` to auto-format).
 Generate lab data with `python -m lab.generator --scenario degraded_rrc`.
+See the [runbook](docs/runbook.md) for a full setup and run walkthrough.
 
 The repository is private initially. A licence and any public/private split
 will be chosen deliberately before publishing. Do not commit credentials,

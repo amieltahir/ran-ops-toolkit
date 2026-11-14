@@ -44,7 +44,7 @@ def test_network_deterministic_per_seed() -> None:
 
 
 def test_scenarios_available() -> None:
-    assert {"healthy", "degraded_rrc"} <= set(available_scenarios())
+    assert {"healthy", "degraded_rrc", "cell_down"} <= set(available_scenarios())
     with pytest.raises(ValueError):
         load_scenario("nope")
 
@@ -160,3 +160,34 @@ def test_default_start_is_utc() -> None:
     assert generate(1, "healthy", n_cells=3, periods=1).start == datetime(
         2026, 1, 1, tzinfo=UTC
     )
+
+
+def test_cell_down_matches_truth() -> None:
+    dataset = generate(21, "cell_down", n_cells=60, periods=4)
+    down = {i["cell_id"] for i in dataset.truth["injected"]}
+    assert len(down) == 2
+    assert {s.cell_id for s in dataset.cell_states if not s.in_service} == down
+    assert {a.object_id for a in dataset.alarms if a.is_active} == down
+    for m in dataset.measurements:
+        if m.object_id in down and m.counter != "RRU.PrbAvailDl":
+            assert m.value == 0
+
+
+def test_healthy_cells_all_in_service_without_alarms() -> None:
+    dataset = generate(21, "healthy", n_cells=60, periods=1)
+    assert all(s.in_service for s in dataset.cell_states)
+    assert dataset.alarms == ()
+    assert len(dataset.cell_states) == 60
+
+
+def test_cell_down_kpis_are_none() -> None:
+    dataset = generate(21, "cell_down", n_cells=30, periods=1)
+    down = next(iter({i["cell_id"] for i in dataset.truth["injected"]}))
+    counters = {m.counter: m.value for m in dataset.measurements if m.object_id == down}
+    kpi = load_kpis()["rrc_setup_success_rate"]
+    assert evaluate_kpi(kpi, down, dataset.start, counters).value is None
+
+
+def test_other_scenarios_unchanged_by_cell_down_support() -> None:
+    a = generate(3, "degraded_rrc", n_cells=30, periods=2)
+    assert all(s.in_service for s in a.cell_states)

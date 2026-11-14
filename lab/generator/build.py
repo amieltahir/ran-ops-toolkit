@@ -8,10 +8,18 @@ from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
 from typing import Any
 
-from ranops.core import Measurement, load_counters
+from ranops.core import (
+    AdminState,
+    Alarm,
+    CellState,
+    Measurement,
+    OperationalState,
+    Severity,
+    load_counters,
+)
 
 from lab.generator.network import Network, build_network, prb_available
-from lab.generator.scenarios import Scenario, load_scenario
+from lab.generator.scenarios import DegradedRrc, Scenario, load_scenario
 
 GRANULARITY_S = 900
 DEFAULT_START = datetime(2026, 1, 1, tzinfo=UTC)
@@ -32,6 +40,8 @@ class Dataset:
     start: datetime
     periods: int
     measurements: tuple[Measurement, ...]
+    cell_states: tuple[CellState, ...]
+    alarms: tuple[Alarm, ...]
     truth: dict[str, Any]
 
 
@@ -67,20 +77,25 @@ def generate(
 
     injected: list[dict[str, Any]] = []
     rrc_rate_override: dict[str, float] = {}
+    down_cells: set[str] = set()
     inject_rng = random.Random(f"inject:{seed}:{scenario.name}")
     for injection in scenario.injections:
-        free = [c for c in cell_ids if c not in rrc_rate_override]
-        for cell_id in sorted(
-            inject_rng.sample(free, min(injection.cell_count, len(free)))
-        ):
-            rrc_rate_override[cell_id] = injection.rrc_success_rate
-            injected.append(
-                {
-                    "type": injection.type,
-                    "cell_id": cell_id,
-                    "rrc_success_rate": injection.rrc_success_rate,
-                }
-            )
+        taken = rrc_rate_override.keys() | down_cells
+        free = [c for c in cell_ids if c not in taken]
+        chosen = sorted(inject_rng.sample(free, min(injection.cell_count, len(free))))
+        for cell_id in chosen:
+            if isinstance(injection, DegradedRrc):
+                rrc_rate_override[cell_id] = injection.rrc_success_rate
+                injected.append(
+                    {
+                        "type": injection.type,
+                        "cell_id": cell_id,
+                        "rrc_success_rate": injection.rrc_success_rate,
+                    }
+                )
+            else:
+                down_cells.add(cell_id)
+                injected.append({"type": injection.type, "cell_id": cell_id})
 
     counters = load_counters()
     for name in (RRC_ATT, RRC_SUCC, ERAB_ATT, ERAB_SUCC, PRB_USED, PRB_AVAIL):
@@ -110,6 +125,9 @@ def generate(
             used = round(
                 avail * _clamp(0.55 * load * traffic_rng.uniform(0.9, 1.1), 0, 1), 1
             )
+            if cell.id in down_cells:
+                att = succ = erab_att = erab_succ = 0
+                used = 0.0
             values = {
                 RRC_ATT: att,
                 RRC_SUCC: succ,
@@ -129,6 +147,30 @@ def generate(
                 for counter, value in values.items()
             )
 
+    cell_states = tuple(
+        CellState(
+            cell_id=c.id,
+            admin_state=AdminState.UNLOCKED,
+            operational_state=(
+                OperationalState.DISABLED
+                if c.id in down_cells
+                else OperationalState.ENABLED
+            ),
+        )
+        for c in cells
+    )
+    alarms = tuple(
+        Alarm(
+            id=f"ALM-{i:04d}",
+            object_id=cell_id,
+            severity=Severity.MAJOR,
+            alarm_type="communications",
+            probable_cause="cell unavailable",
+            raised_at=start,
+        )
+        for i, cell_id in enumerate(sorted(down_cells), start=1)
+    )
+
     truth = {
         "seed": seed,
         "scenario": scenario.name,
@@ -138,4 +180,14 @@ def generate(
         "granularity_s": GRANULARITY_S,
         "injected": injected,
     }
-    return Dataset(seed, scenario, network, start, periods, tuple(measurements), truth)
+    return Dataset(
+        seed,
+        scenario,
+        network,
+        start,
+        periods,
+        tuple(measurements),
+        cell_states,
+        alarms,
+        truth,
+    )

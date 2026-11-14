@@ -47,6 +47,14 @@ This document replaces `ran_ops_toolkit_blueprint.md`. It is the single source o
 
 Rules: tools call only the adapter interface. Vendor-specific names live only in `adapters/`. Every tool returns structured JSON first; HTML/CSV are rendered from it.
 
+### Boundary rules (M2 and later)
+
+- Generic 3GPP formats (for example TS 32.435 PM XML) are parsed in the vendor-neutral `sources/` layer (`sources/pm_3gpp_xml.py`, implementing `PmSource`). Adapters only map vendor-specific counter names and DNs to canonical types.
+- Dependencies point one way: `lab/` may import `core`. `adapters/` and `tools/` never import `lab/`, and the mock node never imports adapter code, so adapter tests are not circular.
+- The only contracts between the lab and the toolkit are the SSH dialect in `docs/mock-dialect.md`, the PM files, and the generator's `truth.json`.
+- `cell_down` (disabled cell plus alarm) is required before M2 closes, so state and alarm parsing are exercised. `param_drift` follows in M3.
+- The CLI calls tools like any other client.
+
 ## 4. Repository layout
 
 ```text
