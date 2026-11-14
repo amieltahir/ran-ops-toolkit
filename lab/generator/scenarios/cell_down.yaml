@@ -1,0 +1,5 @@
+name: cell_down
+description: A few cells are operationally disabled with zero traffic and an active alarm.
+injections:
+  - type: cell_down
+    cell_count: 2

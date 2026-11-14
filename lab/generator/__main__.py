@@ -43,9 +43,14 @@ def main(argv: list[str] | None = None) -> int:
         "cells": [c.model_dump(mode="json") for c in dataset.network.cells],
     }
     (out / "network.json").write_text(json.dumps(network, indent=2) + "\n", "utf-8")
+    state = {
+        "cell_states": [s.model_dump(mode="json") for s in dataset.cell_states],
+        "alarms": [a.model_dump(mode="json") for a in dataset.alarms],
+    }
+    (out / "state.json").write_text(json.dumps(state, indent=2) + "\n", "utf-8")
     (out / "truth.json").write_text(json.dumps(dataset.truth, indent=2) + "\n", "utf-8")
     paths = write_pm_files(dataset.network, dataset.measurements, out / "pm")
-    print(f"wrote {len(paths)} PM files and network/truth JSON to {out}")
+    print(f"wrote {len(paths)} PM files and network/state/truth JSON to {out}")
 
     xsd = args.xsd or (DEFAULT_XSD if DEFAULT_XSD.is_file() else None)
     if xsd is None:

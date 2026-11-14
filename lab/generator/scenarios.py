@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Literal
+from typing import Annotated, Literal
 
 import yaml
 from pydantic import BaseModel, ConfigDict, Field
@@ -21,12 +21,25 @@ class DegradedRrc(BaseModel):
     rrc_success_rate: float = Field(gt=0, lt=1)
 
 
+class CellDown(BaseModel):
+    """Take cells out of service: operationally disabled, zero traffic, one
+    active alarm each."""
+
+    model_config = ConfigDict(frozen=True, extra="forbid")
+
+    type: Literal["cell_down"]
+    cell_count: int = Field(ge=1)
+
+
+Injection = Annotated[DegradedRrc | CellDown, Field(discriminator="type")]
+
+
 class Scenario(BaseModel):
     model_config = ConfigDict(frozen=True, extra="forbid")
 
     name: str = Field(min_length=1)
     description: str = Field(min_length=1)
-    injections: tuple[DegradedRrc, ...] = ()
+    injections: tuple[Injection, ...] = ()
 
 
 def available_scenarios() -> list[str]:
