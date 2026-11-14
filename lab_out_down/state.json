@@ -1,0 +1,324 @@
+{
+  "cell_states": [
+    {
+      "cell_id": "ENB001-1",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB001-2",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB001-3",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB002-1",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB002-2",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB002-3",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB003-1",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB003-2",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB003-3",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB004-1",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB004-2",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB004-3",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB005-1",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB005-2",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB005-3",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB006-1",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB006-2",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB006-3",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB007-1",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB007-2",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB007-3",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB008-1",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB008-2",
+      "admin_state": "unlocked",
+      "operational_state": "disabled"
+    },
+    {
+      "cell_id": "ENB008-3",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB009-1",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB009-2",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB009-3",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB010-1",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB010-2",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB010-3",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB011-1",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB011-2",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB011-3",
+      "admin_state": "unlocked",
+      "operational_state": "disabled"
+    },
+    {
+      "cell_id": "ENB012-1",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB012-2",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB012-3",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB013-1",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB013-2",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB013-3",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB014-1",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB014-2",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB014-3",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB015-1",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB015-2",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB015-3",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB016-1",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB016-2",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB016-3",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB017-1",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB017-2",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB017-3",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB018-1",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB018-2",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB018-3",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB019-1",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB019-2",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB019-3",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB020-1",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB020-2",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    },
+    {
+      "cell_id": "ENB020-3",
+      "admin_state": "unlocked",
+      "operational_state": "enabled"
+    }
+  ],
+  "alarms": [
+    {
+      "id": "ALM-0001",
+      "object_id": "ENB008-2",
+      "severity": "major",
+      "alarm_type": "communications",
+      "probable_cause": "cell unavailable",
+      "raised_at": "2026-01-01T00:00:00Z",
+      "cleared_at": null
+    },
+    {
+      "id": "ALM-0002",
+      "object_id": "ENB011-3",
+      "severity": "major",
+      "alarm_type": "communications",
+      "probable_cause": "cell unavailable",
+      "raised_at": "2026-01-01T00:00:00Z",
+      "cleared_at": null
+    }
+  ]
+}

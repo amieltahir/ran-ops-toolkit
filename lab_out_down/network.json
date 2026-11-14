@@ -1,0 +1,748 @@
+{
+  "sites": [
+    {
+      "id": "SITE001",
+      "name": "Lab site 1",
+      "latitude": 51.87961,
+      "longitude": -0.06068
+    },
+    {
+      "id": "SITE002",
+      "name": "Lab site 2",
+      "latitude": 51.97416,
+      "longitude": -0.29965
+    },
+    {
+      "id": "SITE003",
+      "name": "Lab site 3",
+      "latitude": 51.5113,
+      "longitude": -0.5761
+    },
+    {
+      "id": "SITE004",
+      "name": "Lab site 4",
+      "latitude": 51.87788,
+      "longitude": -0.49122
+    },
+    {
+      "id": "SITE005",
+      "name": "Lab site 5",
+      "latitude": 51.94973,
+      "longitude": -0.16081
+    },
+    {
+      "id": "SITE006",
+      "name": "Lab site 6",
+      "latitude": 51.3758,
+      "longitude": -0.39904
+    },
+    {
+      "id": "SITE007",
+      "name": "Lab site 7",
+      "latitude": 51.00855,
+      "longitude": -0.32498
+    },
+    {
+      "id": "SITE008",
+      "name": "Lab site 8",
+      "latitude": 51.0455,
+      "longitude": -0.75355
+    },
+    {
+      "id": "SITE009",
+      "name": "Lab site 9",
+      "latitude": 51.60381,
+      "longitude": -0.5168
+    },
+    {
+      "id": "SITE010",
+      "name": "Lab site 10",
+      "latitude": 51.15158,
+      "longitude": -0.73278
+    },
+    {
+      "id": "SITE011",
+      "name": "Lab site 11",
+      "latitude": 51.35483,
+      "longitude": -0.24411
+    },
+    {
+      "id": "SITE012",
+      "name": "Lab site 12",
+      "latitude": 51.71198,
+      "longitude": -0.56989
+    },
+    {
+      "id": "SITE013",
+      "name": "Lab site 13",
+      "latitude": 51.76617,
+      "longitude": -0.05807
+    },
+    {
+      "id": "SITE014",
+      "name": "Lab site 14",
+      "latitude": 51.61627,
+      "longitude": -0.48494
+    },
+    {
+      "id": "SITE015",
+      "name": "Lab site 15",
+      "latitude": 51.6636,
+      "longitude": -0.12331
+    },
+    {
+      "id": "SITE016",
+      "name": "Lab site 16",
+      "latitude": 51.68254,
+      "longitude": -0.72082
+    },
+    {
+      "id": "SITE017",
+      "name": "Lab site 17",
+      "latitude": 51.4908,
+      "longitude": -0.3237
+    },
+    {
+      "id": "SITE018",
+      "name": "Lab site 18",
+      "latitude": 51.42155,
+      "longitude": -0.98449
+    },
+    {
+      "id": "SITE019",
+      "name": "Lab site 19",
+      "latitude": 51.50075,
+      "longitude": -0.60398
+    },
+    {
+      "id": "SITE020",
+      "name": "Lab site 20",
+      "latitude": 51.43639,
+      "longitude": -0.10124
+    }
+  ],
+  "nodes": [
+    {
+      "id": "ENB001",
+      "site_id": "SITE001",
+      "vendor": "ericsson",
+      "sw_version": "LAB-21.Q4",
+      "ip": "10.20.0.1"
+    },
+    {
+      "id": "ENB002",
+      "site_id": "SITE002",
+      "vendor": "ericsson",
+      "sw_version": "LAB-21.Q4",
+      "ip": "10.20.0.2"
+    },
+    {
+      "id": "ENB003",
+      "site_id": "SITE003",
+      "vendor": "ericsson",
+      "sw_version": "LAB-21.Q4",
+      "ip": "10.20.0.3"
+    },
+    {
+      "id": "ENB004",
+      "site_id": "SITE004",
+      "vendor": "ericsson",
+      "sw_version": "LAB-21.Q4",
+      "ip": "10.20.0.4"
+    },
+    {
+      "id": "ENB005",
+      "site_id": "SITE005",
+      "vendor": "ericsson",
+      "sw_version": "LAB-21.Q4",
+      "ip": "10.20.0.5"
+    },
+    {
+      "id": "ENB006",
+      "site_id": "SITE006",
+      "vendor": "ericsson",
+      "sw_version": "LAB-21.Q4",
+      "ip": "10.20.0.6"
+    },
+    {
+      "id": "ENB007",
+      "site_id": "SITE007",
+      "vendor": "ericsson",
+      "sw_version": "LAB-21.Q4",
+      "ip": "10.20.0.7"
+    },
+    {
+      "id": "ENB008",
+      "site_id": "SITE008",
+      "vendor": "ericsson",
+      "sw_version": "LAB-21.Q4",
+      "ip": "10.20.0.8"
+    },
+    {
+      "id": "ENB009",
+      "site_id": "SITE009",
+      "vendor": "ericsson",
+      "sw_version": "LAB-21.Q4",
+      "ip": "10.20.0.9"
+    },
+    {
+      "id": "ENB010",
+      "site_id": "SITE010",
+      "vendor": "ericsson",
+      "sw_version": "LAB-21.Q4",
+      "ip": "10.20.0.10"
+    },
+    {
+      "id": "ENB011",
+      "site_id": "SITE011",
+      "vendor": "ericsson",
+      "sw_version": "LAB-21.Q4",
+      "ip": "10.20.0.11"
+    },
+    {
+      "id": "ENB012",
+      "site_id": "SITE012",
+      "vendor": "ericsson",
+      "sw_version": "LAB-21.Q4",
+      "ip": "10.20.0.12"
+    },
+    {
+      "id": "ENB013",
+      "site_id": "SITE013",
+      "vendor": "ericsson",
+      "sw_version": "LAB-21.Q4",
+      "ip": "10.20.0.13"
+    },
+    {
+      "id": "ENB014",
+      "site_id": "SITE014",
+      "vendor": "ericsson",
+      "sw_version": "LAB-21.Q4",
+      "ip": "10.20.0.14"
+    },
+    {
+      "id": "ENB015",
+      "site_id": "SITE015",
+      "vendor": "ericsson",
+      "sw_version": "LAB-21.Q4",
+      "ip": "10.20.0.15"
+    },
+    {
+      "id": "ENB016",
+      "site_id": "SITE016",
+      "vendor": "ericsson",
+      "sw_version": "LAB-21.Q4",
+      "ip": "10.20.0.16"
+    },
+    {
+      "id": "ENB017",
+      "site_id": "SITE017",
+      "vendor": "ericsson",
+      "sw_version": "LAB-21.Q4",
+      "ip": "10.20.0.17"
+    },
+    {
+      "id": "ENB018",
+      "site_id": "SITE018",
+      "vendor": "ericsson",
+      "sw_version": "LAB-21.Q4",
+      "ip": "10.20.0.18"
+    },
+    {
+      "id": "ENB019",
+      "site_id": "SITE019",
+      "vendor": "ericsson",
+      "sw_version": "LAB-21.Q4",
+      "ip": "10.20.0.19"
+    },
+    {
+      "id": "ENB020",
+      "site_id": "SITE020",
+      "vendor": "ericsson",
+      "sw_version": "LAB-21.Q4",
+      "ip": "10.20.0.20"
+    }
+  ],
+  "cells": [
+    {
+      "id": "ENB001-1",
+      "node_id": "ENB001",
+      "band": 3,
+      "earfcn": 1300,
+      "pci": 189,
+      "tac": 1001
+    },
+    {
+      "id": "ENB001-2",
+      "node_id": "ENB001",
+      "band": 7,
+      "earfcn": 3100,
+      "pci": 487,
+      "tac": 1001
+    },
+    {
+      "id": "ENB001-3",
+      "node_id": "ENB001",
+      "band": 20,
+      "earfcn": 6300,
+      "pci": 245,
+      "tac": 1001
+    },
+    {
+      "id": "ENB002-1",
+      "node_id": "ENB002",
+      "band": 3,
+      "earfcn": 1300,
+      "pci": 375,
+      "tac": 1001
+    },
+    {
+      "id": "ENB002-2",
+      "node_id": "ENB002",
+      "band": 7,
+      "earfcn": 3100,
+      "pci": 472,
+      "tac": 1001
+    },
+    {
+      "id": "ENB002-3",
+      "node_id": "ENB002",
+      "band": 20,
+      "earfcn": 6300,
+      "pci": 127,
+      "tac": 1001
+    },
+    {
+      "id": "ENB003-1",
+      "node_id": "ENB003",
+      "band": 3,
+      "earfcn": 1300,
+      "pci": 274,
+      "tac": 1001
+    },
+    {
+      "id": "ENB003-2",
+      "node_id": "ENB003",
+      "band": 7,
+      "earfcn": 3100,
+      "pci": 329,
+      "tac": 1001
+    },
+    {
+      "id": "ENB003-3",
+      "node_id": "ENB003",
+      "band": 20,
+      "earfcn": 6300,
+      "pci": 279,
+      "tac": 1001
+    },
+    {
+      "id": "ENB004-1",
+      "node_id": "ENB004",
+      "band": 3,
+      "earfcn": 1300,
+      "pci": 73,
+      "tac": 1001
+    },
+    {
+      "id": "ENB004-2",
+      "node_id": "ENB004",
+      "band": 7,
+      "earfcn": 3100,
+      "pci": 365,
+      "tac": 1001
+    },
+    {
+      "id": "ENB004-3",
+      "node_id": "ENB004",
+      "band": 20,
+      "earfcn": 6300,
+      "pci": 396,
+      "tac": 1001
+    },
+    {
+      "id": "ENB005-1",
+      "node_id": "ENB005",
+      "band": 3,
+      "earfcn": 1300,
+      "pci": 341,
+      "tac": 1001
+    },
+    {
+      "id": "ENB005-2",
+      "node_id": "ENB005",
+      "band": 7,
+      "earfcn": 3100,
+      "pci": 227,
+      "tac": 1001
+    },
+    {
+      "id": "ENB005-3",
+      "node_id": "ENB005",
+      "band": 20,
+      "earfcn": 6300,
+      "pci": 207,
+      "tac": 1001
+    },
+    {
+      "id": "ENB006-1",
+      "node_id": "ENB006",
+      "band": 3,
+      "earfcn": 1300,
+      "pci": 383,
+      "tac": 1001
+    },
+    {
+      "id": "ENB006-2",
+      "node_id": "ENB006",
+      "band": 7,
+      "earfcn": 3100,
+      "pci": 195,
+      "tac": 1001
+    },
+    {
+      "id": "ENB006-3",
+      "node_id": "ENB006",
+      "band": 20,
+      "earfcn": 6300,
+      "pci": 160,
+      "tac": 1001
+    },
+    {
+      "id": "ENB007-1",
+      "node_id": "ENB007",
+      "band": 3,
+      "earfcn": 1300,
+      "pci": 216,
+      "tac": 1001
+    },
+    {
+      "id": "ENB007-2",
+      "node_id": "ENB007",
+      "band": 7,
+      "earfcn": 3100,
+      "pci": 206,
+      "tac": 1001
+    },
+    {
+      "id": "ENB007-3",
+      "node_id": "ENB007",
+      "band": 20,
+      "earfcn": 6300,
+      "pci": 439,
+      "tac": 1001
+    },
+    {
+      "id": "ENB008-1",
+      "node_id": "ENB008",
+      "band": 3,
+      "earfcn": 1300,
+      "pci": 241,
+      "tac": 1001
+    },
+    {
+      "id": "ENB008-2",
+      "node_id": "ENB008",
+      "band": 7,
+      "earfcn": 3100,
+      "pci": 120,
+      "tac": 1001
+    },
+    {
+      "id": "ENB008-3",
+      "node_id": "ENB008",
+      "band": 20,
+      "earfcn": 6300,
+      "pci": 340,
+      "tac": 1001
+    },
+    {
+      "id": "ENB009-1",
+      "node_id": "ENB009",
+      "band": 3,
+      "earfcn": 1300,
+      "pci": 444,
+      "tac": 1001
+    },
+    {
+      "id": "ENB009-2",
+      "node_id": "ENB009",
+      "band": 7,
+      "earfcn": 3100,
+      "pci": 172,
+      "tac": 1001
+    },
+    {
+      "id": "ENB009-3",
+      "node_id": "ENB009",
+      "band": 20,
+      "earfcn": 6300,
+      "pci": 56,
+      "tac": 1001
+    },
+    {
+      "id": "ENB010-1",
+      "node_id": "ENB010",
+      "band": 3,
+      "earfcn": 1300,
+      "pci": 61,
+      "tac": 1001
+    },
+    {
+      "id": "ENB010-2",
+      "node_id": "ENB010",
+      "band": 7,
+      "earfcn": 3100,
+      "pci": 345,
+      "tac": 1001
+    },
+    {
+      "id": "ENB010-3",
+      "node_id": "ENB010",
+      "band": 20,
+      "earfcn": 6300,
+      "pci": 53,
+      "tac": 1001
+    },
+    {
+      "id": "ENB011-1",
+      "node_id": "ENB011",
+      "band": 3,
+      "earfcn": 1300,
+      "pci": 496,
+      "tac": 1002
+    },
+    {
+      "id": "ENB011-2",
+      "node_id": "ENB011",
+      "band": 7,
+      "earfcn": 3100,
+      "pci": 2,
+      "tac": 1002
+    },
+    {
+      "id": "ENB011-3",
+      "node_id": "ENB011",
+      "band": 20,
+      "earfcn": 6300,
+      "pci": 22,
+      "tac": 1002
+    },
+    {
+      "id": "ENB012-1",
+      "node_id": "ENB012",
+      "band": 3,
+      "earfcn": 1300,
+      "pci": 339,
+      "tac": 1002
+    },
+    {
+      "id": "ENB012-2",
+      "node_id": "ENB012",
+      "band": 7,
+      "earfcn": 3100,
+      "pci": 116,
+      "tac": 1002
+    },
+    {
+      "id": "ENB012-3",
+      "node_id": "ENB012",
+      "band": 20,
+      "earfcn": 6300,
+      "pci": 367,
+      "tac": 1002
+    },
+    {
+      "id": "ENB013-1",
+      "node_id": "ENB013",
+      "band": 3,
+      "earfcn": 1300,
+      "pci": 89,
+      "tac": 1002
+    },
+    {
+      "id": "ENB013-2",
+      "node_id": "ENB013",
+      "band": 7,
+      "earfcn": 3100,
+      "pci": 124,
+      "tac": 1002
+    },
+    {
+      "id": "ENB013-3",
+      "node_id": "ENB013",
+      "band": 20,
+      "earfcn": 6300,
+      "pci": 392,
+      "tac": 1002
+    },
+    {
+      "id": "ENB014-1",
+      "node_id": "ENB014",
+      "band": 3,
+      "earfcn": 1300,
+      "pci": 154,
+      "tac": 1002
+    },
+    {
+      "id": "ENB014-2",
+      "node_id": "ENB014",
+      "band": 7,
+      "earfcn": 3100,
+      "pci": 301,
+      "tac": 1002
+    },
+    {
+      "id": "ENB014-3",
+      "node_id": "ENB014",
+      "band": 20,
+      "earfcn": 6300,
+      "pci": 471,
+      "tac": 1002
+    },
+    {
+      "id": "ENB015-1",
+      "node_id": "ENB015",
+      "band": 3,
+      "earfcn": 1300,
+      "pci": 69,
+      "tac": 1002
+    },
+    {
+      "id": "ENB015-2",
+      "node_id": "ENB015",
+      "band": 7,
+      "earfcn": 3100,
+      "pci": 63,
+      "tac": 1002
+    },
+    {
+      "id": "ENB015-3",
+      "node_id": "ENB015",
+      "band": 20,
+      "earfcn": 6300,
+      "pci": 218,
+      "tac": 1002
+    },
+    {
+      "id": "ENB016-1",
+      "node_id": "ENB016",
+      "band": 3,
+      "earfcn": 1300,
+      "pci": 421,
+      "tac": 1002
+    },
+    {
+      "id": "ENB016-2",
+      "node_id": "ENB016",
+      "band": 7,
+      "earfcn": 3100,
+      "pci": 323,
+      "tac": 1002
+    },
+    {
+      "id": "ENB016-3",
+      "node_id": "ENB016",
+      "band": 20,
+      "earfcn": 6300,
+      "pci": 411,
+      "tac": 1002
+    },
+    {
+      "id": "ENB017-1",
+      "node_id": "ENB017",
+      "band": 3,
+      "earfcn": 1300,
+      "pci": 144,
+      "tac": 1002
+    },
+    {
+      "id": "ENB017-2",
+      "node_id": "ENB017",
+      "band": 7,
+      "earfcn": 3100,
+      "pci": 426,
+      "tac": 1002
+    },
+    {
+      "id": "ENB017-3",
+      "node_id": "ENB017",
+      "band": 20,
+      "earfcn": 6300,
+      "pci": 468,
+      "tac": 1002
+    },
+    {
+      "id": "ENB018-1",
+      "node_id": "ENB018",
+      "band": 3,
+      "earfcn": 1300,
+      "pci": 497,
+      "tac": 1002
+    },
+    {
+      "id": "ENB018-2",
+      "node_id": "ENB018",
+      "band": 7,
+      "earfcn": 3100,
+      "pci": 352,
+      "tac": 1002
+    },
+    {
+      "id": "ENB018-3",
+      "node_id": "ENB018",
+      "band": 20,
+      "earfcn": 6300,
+      "pci": 97,
+      "tac": 1002
+    },
+    {
+      "id": "ENB019-1",
+      "node_id": "ENB019",
+      "band": 3,
+      "earfcn": 1300,
+      "pci": 348,
+      "tac": 1002
+    },
+    {
+      "id": "ENB019-2",
+      "node_id": "ENB019",
+      "band": 7,
+      "earfcn": 3100,
+      "pci": 128,
+      "tac": 1002
+    },
+    {
+      "id": "ENB019-3",
+      "node_id": "ENB019",
+      "band": 20,
+      "earfcn": 6300,
+      "pci": 184,
+      "tac": 1002
+    },
+    {
+      "id": "ENB020-1",
+      "node_id": "ENB020",
+      "band": 3,
+      "earfcn": 1300,
+      "pci": 11,
+      "tac": 1002
+    },
+    {
+      "id": "ENB020-2",
+      "node_id": "ENB020",
+      "band": 7,
+      "earfcn": 3100,
+      "pci": 326,
+      "tac": 1002
+    },
+    {
+      "id": "ENB020-3",
+      "node_id": "ENB020",
+      "band": 20,
+      "earfcn": 6300,
+      "pci": 240,
+      "tac": 1002
+    }
+  ]
+}

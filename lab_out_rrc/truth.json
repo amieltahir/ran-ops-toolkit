@@ -1,0 +1,25 @@
+{
+  "seed": 42,
+  "scenario": "degraded_rrc",
+  "cells": 60,
+  "start": "2026-01-01T00:00:00+00:00",
+  "periods": 96,
+  "granularity_s": 900,
+  "injected": [
+    {
+      "type": "degraded_rrc",
+      "cell_id": "ENB003-1",
+      "rrc_success_rate": 0.85
+    },
+    {
+      "type": "degraded_rrc",
+      "cell_id": "ENB005-2",
+      "rrc_success_rate": 0.85
+    },
+    {
+      "type": "degraded_rrc",
+      "cell_id": "ENB013-3",
+      "rrc_success_rate": 0.85
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<measCollecFile xmlns="http://www.3gpp.org/ftp/specs/archive/32_series/32.435#measCollec">
+  <fileHeader fileFormatVersion="32.435 V10.0" vendorName="ericsson" dnPrefix="SubNetwork=LAB">
+    <fileSender localDn="ManagedElement=ENB015"/>
+    <measCollec beginTime="2026-01-01T18:15:00+00:00"/>
+  </fileHeader>
+  <measData>
+    <managedElement localDn="ManagedElement=ENB015" swVersion="LAB-21.Q4"/>
+    <measInfo measInfoId="LTE_CELL">
+      <job jobId="lab-pm-15min"/>
+      <granPeriod duration="PT900S" endTime="2026-01-01T18:30:00+00:00"/>
+      <repPeriod duration="PT900S"/>
+      <measType p="1">RRC.ConnEstabAtt.Sum</measType>
+      <measType p="2">RRC.ConnEstabSucc.Sum</measType>
+      <measType p="3">E-RAB.EstabInitAttNbr.Sum</measType>
+      <measType p="4">E-RAB.EstabInitSuccNbr.Sum</measType>
+      <measType p="5">RRU.PrbUsedDl</measType>
+      <measType p="6">RRU.PrbAvailDl</measType>
+      <measValue measObjLdn="EUtranCellFDD=ENB015-1">
+        <r p="1">5355.0</r>
+        <r p="2">5327.0</r>
+        <r p="3">5327.0</r>
+        <r p="4">5296.0</r>
+        <r p="5">55.9</r>
+        <r p="6">100.0</r>
+      </measValue>
+      <measValue measObjLdn="EUtranCellFDD=ENB015-2">
+        <r p="1">5147.0</r>
+        <r p="2">5122.0</r>
+        <r p="3">5122.0</r>
+        <r p="4">5101.0</r>
+        <r p="5">50.3</r>
+        <r p="6">100.0</r>
+      </measValue>
+      <measValue measObjLdn="EUtranCellFDD=ENB015-3">
+        <r p="1">6291.0</r>
+        <r p="2">6257.0</r>
+        <r p="3">6257.0</r>
+        <r p="4">6237.0</r>
+        <r p="5">29.5</r>
+        <r p="6">50.0</r>
+      </measValue>
+    </measInfo>
+  </measData>
+  <fileFooter>
+    <measCollec endTime="2026-01-01T18:30:00+00:00"/>
+  </fileFooter>
+</measCollecFile>

@@ -1,0 +1,18 @@
+{
+  "seed": 42,
+  "scenario": "cell_down",
+  "cells": 60,
+  "start": "2026-01-01T00:00:00+00:00",
+  "periods": 96,
+  "granularity_s": 900,
+  "injected": [
+    {
+      "type": "cell_down",
+      "cell_id": "ENB008-2"
+    },
+    {
+      "type": "cell_down",
+      "cell_id": "ENB011-3"
+    }
+  ]
+}
